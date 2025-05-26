@@ -44,16 +44,26 @@ cd frontend && npm install
 
 ### Set Environment Variables
 ---
-### FRONTEND:
+### FRONTEND
+
 REACT_APP_EMAILJS_SERVICE_ID=your_service_id
+
 REACT_APP_EMAILJS_TEMPLATE_ID=your_template_id
+
 REACT_APP_EMAILJS_PUBLIC_KEY=your_emailjs_public_key
+
 ---
-### BACKEND:
+### BACKEND
+
 PORT=port_number
+
 MONGO_URI=your_mongo_url
+
 JWT_SECRET=your_secret
+
 CLOUDINARY_CLOUD_NAME=your_cloud_name
+
 CLOUDINARY_API_KEY=your_cloudinary_api_key
+
 CLOUDINARY_API_SECRET==your_cloudinary_secret 
 
