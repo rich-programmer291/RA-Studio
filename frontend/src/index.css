@@ -1,0 +1,9 @@
+@import 'keen-slider/keen-slider.min.css';
+
+body {
+    font-family: 'Playfair Display', cursive;
+}
+
+.normal {
+    font-family: 'Poppins', sans-serif;
+}

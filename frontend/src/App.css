@@ -1,0 +1,10 @@
+.loader {
+    width: 16px;
+    height: 16px;
+    position: relative;
+    left: -32px;
+    border-radius: 50%;
+    color: #f47792;
+    background: currentColor;
+    box-shadow: 32px 0, -32px 0, 64px 0;
+}
