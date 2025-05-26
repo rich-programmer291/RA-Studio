@@ -23,7 +23,7 @@ const Register = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch('/api/auth/register', {
+      const res = await fetch('https://ra-studio.onrender.com/api/auth/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),

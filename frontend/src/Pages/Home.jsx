@@ -18,7 +18,7 @@ const Home = () => {
   useEffect(() => {
     const fetchImages = async () => {
       try {
-        const res = await fetch('/api/images');
+        const res = await fetch('https://ra-studio.onrender.com/api/images');
         const data = await res.json();
         setImages(data.images);
       } catch (error) {

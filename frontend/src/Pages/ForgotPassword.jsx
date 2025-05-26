@@ -13,7 +13,7 @@ const ForgotPassword = () => {
     const navigate = useNavigate();
 
     const fetchSecurityQuestion = async () => {
-        const res = await fetch(`/api/auth/security-question`, {
+        const res = await fetch(`https://ra-studio.onrender.com/api/auth/security-question`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ username }),
@@ -30,7 +30,7 @@ const ForgotPassword = () => {
     }
 
     const handleForgotPassword = async () => {
-        const res = await fetch('/api/auth/forgot-password', {
+        const res = await fetch('https://ra-studio.onrender.com/api/auth/forgot-password', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ username, securityAnswer, newPassword }),

@@ -29,7 +29,7 @@ const AdminPage = () => {
     const fetchImages = async () => {
       try {
         setLoading(true);
-        const response = await fetch('/api/images');
+        const response = await fetch('https://ra-studio.onrender.com/api/images');
         const data = await response.json();
         setImages(data.images);
       } catch (err) {
@@ -52,7 +52,7 @@ const AdminPage = () => {
 
     try {
       setLoading(true);
-      const response = await fetch('/api/images/upload', {
+      const response = await fetch('https://ra-studio.onrender.com/api/images/upload', {
         method: 'POST',
         body: formData,
       });
@@ -81,7 +81,7 @@ const AdminPage = () => {
   const handleDelete = async (imageId) => {
     try {
       setLoading(true);
-      const res = await fetch('/api/images/delete', {
+      const res = await fetch('https://ra-studio.onrender.com/api/images/delete', {
         method: 'DELETE',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ public_id: imageId }),

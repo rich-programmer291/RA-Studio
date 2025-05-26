@@ -13,7 +13,7 @@ const GalleryPage = () => {
     useEffect(() => {
         const fetchImages = async () => {
             try {
-                const res = await fetch('/api/images'); // Your backend endpoint
+                const res = await fetch('https://ra-studio.onrender.com/api/images'); // Your backend endpoint
                 const data = await res.json();
                 setImages(data.images);
                 setLoading(false);
@@ -56,7 +56,7 @@ const GalleryPage = () => {
         if (!isLiked) {
             updatedLikes = [...likedImages, imageId];
             localStorage.setItem("likedImages", JSON.stringify(updatedLikes));
-            await fetch("/api/images/like", {
+            await fetch("https://ra-studio.onrender.com/api/images/like", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ imageId })
@@ -64,7 +64,7 @@ const GalleryPage = () => {
         } else {
             updatedLikes = likedImages.filter(id => id !== imageId);
             localStorage.setItem("likedImages", JSON.stringify(updatedLikes));
-            await fetch("/api/images/unlike", {
+            await fetch("https://ra-studio.onrender.com/api/images/unlike", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ imageId })
